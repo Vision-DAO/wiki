@@ -1,0 +1,172 @@
+#+TITLE: Roadmap
+#+AUTHOR: Dowland Aiello
+#+DATE: 06/19/2022
+
+* Roadmap [1/4]
+
+** DONE Beacon DAO [2/2]
+The *Beacon DAO* is a decentralized autonomous organization implementing the Vision DAO, and a basic system for "bootstrapping" user applications from a minimal starting point. This means that a bare, basic implementation of the *Beacon DAO* can be released to the public, and be upgraded without any intervention, over time.
+
+- /ETA: Mid-July/
+- Assignee: *Dowland Aiello*
+
+*** DONE DAO Contracts
+
+The *Beacon DAO* implements a one-token-one-share voting system to modify payloads designating code that the *Beacon DAO* provides for the user. These contracts are available [[https://github.com/vision-dao/beacon-dao][here]].
+
+*** DONE Web UI
+
+The primary use case of the *Beacon DAO* is loading further Vision OS modules. This requires executing code on a client's device. The *Beacon DAO* loader UI, available [[https://github.com/Vision-DAO/beacon-dao-loader][here]], implements this functionality.
+** TODO Vision Virtual Machine (~VVM~) [0/4]
+DEADLINE: <2022-07-31 Sun>
+
+The Vision Virtual Machine is a module for the *Beacon DAO* that allows for general computation, and execution of arbitrary code with access to a limited, event-driven API for system-call-like functionality.
+
+- /ETA: Late-July/
+- Assignee: *Dowland Aiello*, *Lawrence Qupty*
+  
+*** TODO Main Event Loop / Scheduler
+
+A process scheduler that uses an event loop to facilitate system calls, and communication between processes. Identifies processes on a per-DAO basis, where each instance of the process is unique, and identified by a hexadecimal address. Rapidly toggles between processes to emulate time-sharing.
+
+*** TODO ABI Capabilities System
+
+An import-based system that signals capabilities of a loaded module, and which events it is capable of emitting. Will be implemented via WASM module imports, likely. Bindings for languages required.S
+
+*** TODO Root Discovery Module
+
+A base module included with the Beacon DAO that queues modules for instantiation by the VVM.
+
+*** TODO Granular Consent Model
+
+A kernel module that implements a system for acquiring user consent, based on the messages that an application can emit, which represent the API's that it has access to (e.g., /"x application is requesting access to your wallet"/).
+
+** TODO Vision Operating System [0/10]
+DEADLINE: <2022-08-31 Wed>
+
+*** TODO Dependency-Based Discovery
+
+A module that provides a basic mechanism for discovering modules, based on detecting dependencies between applications and DAO's. Essentinnally a symbol table for applications written on Vision that DAO applications must import to be able to interface with them. Can be used to traverse the network and find new modules.
+
+*** TODO Window Server API
+
+A module that allows modules provided by DAO's to render windows to the user's screen, in designated locations. Layout-agnostic: does not specify how, or where windows should be laid out.
+
+*** TODO UI Theme API [0/1]
+
+A module that allows Vision modules to alter, read, and specify new theming variables. Consumed by:
+
+**** TODO Playful Vision Layout
+
+A module that implements a playful, user-friendly Vision workspace layout. Intended for basic, fairly limited usage of the platform, but very accessible to many users. Provides a default theme configuration tuned to Jenna Moon-Earle and Ha Tien Nguyen's [[https://cdn.discordapp.com/attachments/928680821571878922/967206294064873563/unknown.png][Vision Color Palette]].
+
+*** TODO Metadata Interface [0/2]
+
+A collection of modules that accept queries for different types of metadata, each identified by their respective module. Modules are unique in the metadata they produce.
+
+**** TODO Module Payload Interface
+
+A module that allows clients to query DAO's for a list of the modules they provide, and the IPLD DAG address of the WebAssembly payload associated with an identified module.
+
+**** TODO DAO Markdown Overview Interface
+
+A metadata module that allows users to view an overview of a DAO, written in Markdown, and rendered to the browser.
+
+*** TODO Proposal System [0/1]
+
+A module that implements a common interface for triggerable changes in the state of a module's metadata, specifically its module payloads.
+
+**** TODO Voting Interface [0/2]
+
+A library of modules that implement various strategies for finalizing proposals on Vision. Assumes that each emits a ~prop_finalized~ event at some point.
+
+***** TODO Quadratic Voting
+
+A module that implements the quadratic voting strategy. N votes by a user costs \[n^2\] tokens. Depends on the [[id:59d00e43-3b84-4413-a604-14dd834e1b5c][Token Model]] module to delegate votes to users in sensible proportions.
+
+***** TODO Share Voting
+
+A module that implemenets a one-token-one-vote voting strategy. N votes by a user costs \[n\] tokens. Depends on the [[id:59d00e43-3b84-4413-a604-14dd834e1b5c][Token Model]] module to allocate votes.
+
+*** TODO Token Model [0/1]
+:PROPERTIES:
+:ID:       59d00e43-3b84-4413-a604-14dd834e1b5c
+:END:
+
+A module that implements ERC-20 tokens for the DAO's that use the module. A common dependency for modules that require a fungible unit of exchange.
+
+**** TODO Treasury
+
+A module that implements proposal-bound transfers from an account owned by a Vision DAO. Relies on the Proposal System to determine when proposals have been finalized. Generic over any voting strategy. Allows for funding relationships, where a parent DAO can establish scheduled transfers from its treasury to a designated address.
+
+*** TODO Parent-Child Discovery
+
+A module that traverses funding relationships from one DAO to another. Used in conjunction with other discovery techniques.
+
+*** TODO Gossip Discovery
+
+A module that allows clients to discover Vision DAO's that are completely unconnected to other DAO's (though such a circumstance is very unlikely). Operates in conjunction with other discovery techniques. Relies on libp2p gossipsub protocol.
+
+*** TODO Visibility [0/2]
+
+A suite of modules that makes DAO's visible, and easily discoverable by users. A front-end for underlying discovery mechanisms.
+
+**** TODO Search
+
+A simple, markdown metadata-based fuzzy searching engine that displays DAO's on Vision that contain specified criteria.
+
+**** TODO Mind Map
+
+An interactive display for discovered DAO's on Vision. Emphasizes the presence of financial and logical dependency relationships through a mind-map model.
+
+*** TODO Collaboration [0/2]
+
+Tools available, per-DAO that allow for discussion of Vision activities without leaving Vision.
+
+**** TODO Chat
+:PROPERTIES:
+:ID:       41b6d451-ffc0-4222-8e49-7a58c18d8615
+:END:
+
+A live chat-room module that allows users to discuss the activities of a DAO without leaving Vision. Uses a naive user implementation based solely on Ethereum addresses, and blockie avatars. See 
+
+**** TODO Discsusion pages
+
+Enhanced discussion pages reminiscent of Reddit, where users create threads, and post comments under threads. One board per DAO. Same user implementation as [[id:41b6d451-ffc0-4222-8e49-7a58c18d8615][chat module]].
+
+** TODO Ecosystem Features [0/3]
+/ETA: ~Dec 2022 - Jan 2023/
+
+Modules that implement important qualify-of-life features, and features that will greatly increase the growth rate of the Vision ecosystem by lowering barriers to entry, and enhancing the Vision experience overall.
+
+*** TODO Web-Accessible Staking / Pinning Interface [0/1]
+
+Implements a web-facing interface to the Vision pinning marketplace and quadratic voting enforcement mechanism, for use by any Vision user. Expands accessibility of staking features from power-users to all Vision users.
+
+**** TODO Stake Pooling
+
+An expansion to the Vision pinning marketplace that allows users to pool together staking resources for use by a delegated validator. Allows users that do not have access to a persistent internet connection to reap staking rewards, and confer risk to another party.
+
+*** TODO Expanded Module Language Support [0/3]
+
+A suite of upgrades to the Vision module system that make developing Vision modules accessible to developers with a wider array of backgrounds and technical experience.
+
+**** TODO Enhanced Bindings for Popular Languages
+
+Enhance developer user experience by providing convenient wrappers for Vision API functionality in popular languages. Aim for feature parity across all "enhanced-support" languages.
+
+**** TODO Expanded Documentation & Examples
+
+Prepare expanded documentation, and example materials for Vision developers in popular languages, including: TypeScript, Python, Rust, and C++.
+
+**** TODO "No-Code" / Block-coding Module Development Interface
+
+Implement a block coding-based Vision module generator, accessible to audiences with very little blockchain, or coding experience.
+
+*** TODO Vision Decentralized ID [0/2]
+
+A Vision module that implements the W3C DID standard, for usage in Vision collaborative tools, for proposal and DAO metadata, and for upcoming social features.
+
+**** TODO Vision Contact List
+
+**** TODO Vision Reputation System

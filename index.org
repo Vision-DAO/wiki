@@ -1,0 +1,17 @@
+#+TITLE: Wiki
+#+AUTHOR: Dowland Aiello
+#+DATE: 06/19/2022
+
+* Development Wiki
+
+** About
+
+This is the Vision Development Wiki. It contains all the resources you need, in one place, to learn about and understand Vision from a technical perspective. It also provides a transparent view into Vision's development pipeline, and current progress.
+
+** Status
+
+| Current Task | Description                                                                                                                                                    | Date Begun | ETA      |
+|--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+----------|
+| VVM          | Implementation of a system that can facilitate message-passing between modules, manage permissions for user apps, and execute dynamic code with minimal bloat. | 06/08/22   | 06/31/22 |
+
+More information on the status of Vision development can be found on the [[file:Roadmap.org::*Roadmap][Roadmap Document]]
