@@ -1,0 +1,33 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../theme/rethink.css" />
+#+OPTIONS: toc:nil num:nil html-style:nil
+#+TITLE: Public Test Net Roadmap
+#+AUTHOR: Dowland Aiello
+#+DATE: 06/22/2022
+
+* TODO Public Test Net [0/3]
+
+- /ETA: Q1 2023/
+
+** TODO Cash Bug Bounties
+Use dework, and alternative platforms, like gitcoin, to set bounties for known, and unknown bugs. Estimated budget up to $5,000.
+** TODO Gamified Achievement System
+As an alternative to cash bug bounties, award NFT-like achievements to early Vision adopters for contributions including, but not limited to:
+
+- [ ] Participating in the Vision Public Beta
+- [ ] Submitting a verified bug report
+- [ ] Creating a DAO on the Vision Public Beta
+
+These achievements will be displayed as badges via a Vision module that can be consumed by Vision OS layouts. Will be enabled by default in the Vision [[file:VisionOS.org::*Playful Vision Layout][playful vision layout]]. Badges will be tradable on public marketplaces if users wish to monetize their accomplishments.
+** TODO Developer Support
+Offer support on Vision forums, including Discord, and Vision itself, for developers and DAO participants on Vision.
+
+*** TODO Hackathon
+
+Host at least one hackathon during the Vision Public Test Net launch featuring workshops, presentations from Vision itself, workshops for how to use Vision, and demonstrations from Vision community members. Host presentations, and judging to dole out cash prizes for designated Vision DAO themes: community impact DAO's, education DAO's, and governance DAO's, for example.
+
+*** TODO Digital Dev Outreach
+
+- Live Q&A sessions
+- Office hours on digital platforms, including Discord
+- Responsive support on GitHub issues, Discord, and on Vision itself
+  - Vision Community DAO to organize efforts

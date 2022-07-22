@@ -1,0 +1,50 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../theme/rethink.css" />
+#+OPTIONS: toc:nil num:nil html-style:nil
+#+TITLE: Ecosystem Roadmap
+#+AUTHOR: Dowland Aiello
+#+DATE: 06/22/2022
+
+* TODO Ecosystem Features [0/3]
+
+DEADLINE: <2022-10-31 Mon>
+
+Modules that implement important qualify-of-life features, and features that will greatly increase the growth rate of the Vision ecosystem by lowering barriers to entry, and enhancing the Vision experience overall.
+
+- /ETA: Oct 2022/
+
+** TODO Web-Accessible Staking / Pinning Interface [0/1]
+Implements a web-facing interface to the Vision pinning marketplace and quadratic voting enforcement mechanism, for use by any Vision user. Expands accessibility of staking features from power-users to all Vision users.
+
+*** TODO Stake Pooling
+
+An expansion to the Vision pinning marketplace that allows users to pool together staking resources for use by a delegated validator. Allows users that do not have access to a persistent internet connection to reap staking rewards, and confer risk to another party.
+
+** TODO Expanded Module Language Support [0/3]
+A suite of upgrades to the Vision module system that make developing Vision modules accessible to developers with a wider array of backgrounds and technical experience.
+
+*** TODO Enhanced Bindings for Popular Languages
+
+Enhance developer user experience by providing convenient wrappers for Vision API functionality in popular languages. Aim for feature parity across all "enhanced-support" languages.
+
+*** TODO Expanded Documentation & Examples
+
+Prepare expanded documentation, and example materials for Vision developers in popular languages, including: TypeScript, Python, Rust, and C++.
+
+*** TODO "No-Code" / Block-coding Module Development Interface
+
+Implement a block coding-based Vision module generator, accessible to audiences with very little blockchain, or coding experience.
+
+** TODO Vision Decentralized ID [0/2]
+A Vision module that implements the W3C DID standard, for usage in Vision collaborative tools, for proposal and DAO metadata, and for upcoming social features.
+
+*** TODO Vision User Profiles
+
+A vision module that allows users to create non-fungible identity DAO's that represent the concept of themselves. Allows identities to be transferred between accounts. Allows for social recovery of a user's identity by delegating ownership logic to a DAO formed by a user's friends and family, for example.
+
+*** TODO Expanded social functions
+
+- [ ] Functionality for following other users
+- [ ] Viewing statistics about a particular user, including their "idea net worth"
+- [ ] Visualizing relationships between users through Vision's "mind map"
+- Generalizable to enhance digital money and web3 applications in general by allowing cryptocurrency users, regardless of blockchain, to track interactions with each other, relationships, and identities, without sharing infrastructure like the Ethereum Name Service
+  

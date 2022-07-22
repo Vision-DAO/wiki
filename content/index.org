@@ -1,3 +1,5 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="theme/rethink.css" />
+#+OPTIONS: toc:nil num:nil html-style:nil
 #+TITLE: Wiki
 #+AUTHOR: Dowland Aiello
 #+DATE: 06/19/2022
@@ -14,4 +16,4 @@ This is the Vision Development Wiki. It contains all the resources you need, in 
 |--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+----------|
 | VVM          | Implementation of a system that can facilitate message-passing between modules, manage permissions for user apps, and execute dynamic code with minimal bloat. | 06/08/22   | 06/31/22 |
 
-More information on the status of Vision development can be found on the [[file:Roadmap.org::*Roadmap][Roadmap Document]]
+More information on the status of Vision development can be found on the [[file:Roadmap.org::*Roadmap][roadmap document]].

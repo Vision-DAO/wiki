@@ -1,0 +1,18 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../theme/rethink.css" />
+#+OPTIONS: toc:nil num:nil html-style:nil
+#+TITLE: Private Test Net Roadmap
+#+AUTHOR: Dowland Aiello
+#+DATE: 06/22/2022
+
+* TODO Private Test Net [0/2]
+
+Vision's test-net release will be gradually rolled out in two phases: a private test-net release, and a public test-net release. The former will be largely closed-source, operate in a sandboxed environment, and be accessible to only trusted partners.
+
+- /ETA: Oct - Dec 2022/
+** TODO Enterprise infrastructure
+- Develop sandboxed deployment environments that shield as much of the Vision codebase as possible from clients, while exposing features that require testing
+** TODO Field Testing
+- Discover bugs, and stress-test Vision features in a sandboxed environment with trusted enterprise partners, including Gaza SkyGeeks, and TechAid + IBM
+- Offer services for developing Vision solutions with desirable partners, and asissting with their deployments
+- Continuously deploy patched instances of the Vision software after internal testing
+

@@ -1,0 +1,16 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../theme/rethink.css" />
+#+OPTIONS: toc:nil num:nil html-style:nil
+#+TITLE: Public Main Net Roadmap
+#+AUTHOR: Dowland Aiello
+#+DATE: 06/22/2022
+
+* TODO Public Main Net [0/3]
+
+- /ETA: Q3 2023/
+** TODO Code Reviews, Auditing
+Perform internal, and external audits of core Vision components, including all modules developed in-house. Resolve any security concerns prior to release of the public test net, including ones that were uncovered in the prior private testnet. Aim for public transparency with audit results prior to public testnet release.
+** TODO Open-Source Codebase
+Sanitize the Vision codebase for any operations vulnerabilities, and make it publicly accessible within 1 month prior to the Vision public mainnet release. Address any further security vulnerabilities discovered by the community as they arise.
+** TODO Testnet to Mainnet Migration
+Persist user achievements, and basic social data, like friend information, followers, and biographies from the Vision testnet to the Vision mainnet. Allow as much data that was created on the Vision testnet to migrate to the Vision mainnet as possible. *Main exclusion:* VIS tokens. The distribution of VIS tokens on the Vision mainnet will be completely aligned with the platform's tokenomics document, and will not respect and balances held during the testnet.
+

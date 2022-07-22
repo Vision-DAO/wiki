@@ -1,0 +1,60 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../theme/rethink.css" />
+#+OPTIONS: toc:nil num:nil html-style:nil
+#+TITLE: Post-Release Roadmap
+#+AUTHOR: Dowland Aiello
+#+DATE: 06/22/2022
+
+* TODO Post-Release [0/5]
+
+General goals for Vision DAO after its mainnet release, including strategies for decentralizing, and desired partnerships.
+
+- /ETA: Q4 2023/
+
+** TODO Vision OS Long-Term Support [0/2]
+Post-release, the Vision DAO will be solely responsible with ensuring the security, and maintaining the Vision Operating System, by patching bugs, and implementing needed features as they arise.
+
+*** TODO Market Tools
+
+Provide utilities for users to leverage market activity across Vision Ideas and Proposals to recognize opportunities in the Vision marketplace, assess risk, and access the most relevant information.
+
+- [ ] Trading volume-based search tools
+- [ ] Market data integration with decentralized exchange analytics providers, including The Graph
+  
+*** TODO Blockchain Agnosticism
+
+- [ ] Implement a generalized API for web3 operations, including: executing smart contract code, loading smart contracts payloads, making transactions, and filtering through blockchain statistics. Will allow Vision users to use whatever blockchain they like, if they believe that Poylgon isn't sufficiently "eco-friendly," for example.
+- [ ] Implement a generalized p2p networking API for Vision DAO's to communicate between users, and discover information that isn't provided by default modules
+  
+** TODO Vision "API" [0/2]
+Provide hosted, and client-side API's for interfacing with the Vision network. Aim to abstract two main Vision features for use in external applications:
+
+*** TODO Vision ID API
+
+Provide an API that:
+- [ ] Allows users to carry persistent Vision identities between sites
+- [ ] Allows developers to consume users' Vision identities by requesting granular permissions
+- [ ] Allow developers to author new Vision ideas from alternate UI's: highlight a comment, and create a Vision Idea; display market information for Ideas of comments on your site; display profile information using Vision
+- [ ] Allows users to inject Vision functionality via a browser extension, in relevant places (i.e., previous use cases, but implemented by the user)
+
+*** TODO Vision Storage API
+
+Allow third parties to store their data by tokenizing on Vision. Drop-in replacement for Amazon S3.
+
+** TODO Vision Ideas ETF
+Implement a DAO on Vision that tracks the top 100 Vision Ideas by marketcap. Similar to an ETF, but for Vision. Allow users to gain exposure to a "basket of assets" on Vision. Generalize to allow derivatives of any number of Vision Ideas to be created, and managed as Vision DAO's.
+** TODO Market Operations [0/3]
+To facilitate Vision's function as the "marketplace of ideas," Vision will take on a role as a "market maker," and angel investor for Ideas on vision, providing liquidity by:
+
+- [ ] Identifying and executing arbitrage opportunities
+- [ ] Identifying valuable investment opportunities through fundamental analysis
+- [ ] Doling out grants, and bounties for valuable public works, further decentralizing Vision
+** TODO Enterprise Tooling [0/2]
+The initial phase of Vision's development centers around the Vision Operating System, which provides most of the functionality that the average consumer requires to run a DAO on Vision.  One of Vision DAO's main goals post-release will be to create tools that facilitate enterprise deployments of Vision DAO's.
+
+*** TODO Collaborative Tooling
+
+Vision's collaborative tools present a compelling alternative to existing tools like Slack, and Microsoft Teams. However, Vision's collaborative tools are often used in conjunction with a DAO token model, including a treasury, and other tools. Enterprises that use Vision should be able to opt into these features, and become increasingly DAO-like. For example, enterprises that use Vision's collaborative tools could start out as DAO's that have no treasury, no voting, and use a Vision ID-based authentication system to access collaboration on Vision.
+
+*** TODO Vision "as a service"
+
+One drawback to cryptocurrency and web3 deployments is that they present variable, and unpredictable costs. This can be especially unappealing for enterprises, who could pay anything from nothing, to thousands of dollars for application deployments, depending on network conditions. To meet this need, Vision will provide hosted "cloud" instances of Vision at reliable costs, pocketing the difference, or footing the bill, between its clients' contract and the gas / pinning fees that it pays.

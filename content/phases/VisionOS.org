@@ -1,0 +1,93 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../theme/rethink.css" />
+#+OPTIONS: toc:nil num:nil html-style:nil
+#+TITLE: Vision OS Roadmap
+#+AUTHOR: Dowland Aiello
+#+DATE: 06/22/2022
+
+* TODO Vision Operating System [0/10]
+DEADLINE: <2022-08-31 Wed>
+
+** TODO Dependency-Based Discovery
+
+A module that provides a basic mechanism for discovering modules, based on detecting dependencies between applications and DAO's. Essentinnally a symbol table for applications written on Vision that DAO applications must import to be able to interface with them. Can be used to traverse the network and find new modules.
+
+** TODO Window Server API
+
+A module that allows modules provided by DAO's to render windows to the user's screen, in designated locations. Layout-agnostic: does not specify how, or where windows should be laid out.
+
+** TODO UI Theme API [0/1]
+
+A module that allows Vision modules to alter, read, and specify new theming variables. Consumed by:
+
+*** TODO Playful Vision Layout
+
+A module that implements a playful, user-friendly Vision workspace layout. Intended for basic, fairly limited usage of the platform, but very accessible to many users. Provides a default theme configuration tuned to Jenna Moon-Earle and Ha Tien Nguyen's [[https://cdn.discordapp.com/attachments/928680821571878922/967206294064873563/unknown.png][Vision Color Palette]].
+
+** TODO Metadata Interface [0/2]
+
+A collection of modules that accept queries for different types of metadata, each identified by their respective module. Modules are unique in the metadata they produce.
+
+*** TODO Module Payload Interface
+
+A module that allows clients to query DAO's for a list of the modules they provide, and the IPLD DAG address of the WebAssembly payload associated with an identified module.
+
+*** TODO DAO Markdown Overview Interface
+
+A metadata module that allows users to view an overview of a DAO, written in Markdown, and rendered to the browser.
+
+** TODO Token Model [0/1]
+
+A module that implements ERC-20 tokens for the DAO's that use the module. A common dependency for modules that require a fungible unit of exchange.
+
+*** TODO Treasury
+
+A module that implements proposal-bound transfers from an account owned by a Vision DAO. Relies on the Proposal System to determine when proposals have been finalized. Generic over any voting strategy. Allows for funding relationships, where a parent DAO can establish scheduled transfers from its treasury to a designated address.
+
+** TODO Proposal System [0/1]
+
+A module that implements a common interface for triggerable changes in the state of a module's metadata, specifically its module payloads.
+
+*** TODO Voting Interface [0/2]
+
+A library of modules that implement various strategies for finalizing proposals on Vision. Assumes that each emits a ~prop_finalized~ event at some point.
+
+**** TODO Quadratic Voting
+
+A module that implements the quadratic voting strategy. N votes by a user costs \[n^2\] tokens. Depends on the [[*Token Model][token model]] module to delegate votes to users in sensible proportions.
+
+**** TODO Share Voting
+
+A module that implemenets a one-token-one-vote voting strategy. N votes by a user costs \[n\] tokens. Depends on the [[*Token Model][token model]] module to allocate votes.
+
+** TODO Parent-Child Discovery
+
+A module that traverses funding relationships from one DAO to another. Used in conjunction with other discovery techniques.
+
+** TODO Gossip Discovery
+
+A module that allows clients to discover Vision DAO's that are completely unconnected to other DAO's (though such a circumstance is very unlikely). Operates in conjunction with other discovery techniques. Relies on libp2p gossipsub protocol.
+
+** TODO Visibility [0/2]
+
+A suite of modules that makes DAO's visible, and easily discoverable by users. A front-end for underlying discovery mechanisms.
+
+*** TODO Search
+
+A simple, markdown metadata-based fuzzy searching engine that displays DAO's on Vision that contain specified criteria.
+
+*** TODO Mind Map
+
+An interactive display for discovered DAO's on Vision. Emphasizes the presence of financial and logical dependency relationships through a mind-map model.
+
+** TODO Collaboration [0/2]
+
+Tools available, per-DAO that allow for discussion of Vision activities without leaving Vision.
+
+*** TODO Chat
+
+A live chat-room module that allows users to discuss the activities of a DAO without leaving Vision. Uses a naive user implementation based solely on Ethereum addresses, and blockie avatars. See 
+
+*** TODO Discsusion pages
+
+Enhanced discussion pages reminiscent of Reddit, where users create threads, and post comments under threads. One board per DAO. Same user implementation as [[*Chat][chat]] module.
+

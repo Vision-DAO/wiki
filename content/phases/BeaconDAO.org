@@ -1,0 +1,17 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../theme/rethink.css" />
+#+OPTIONS: toc:nil num:nil html-style:nil
+#+TITLE: Beacon DAO Roadmap
+#+AUTHOR: Dowland Aiello
+#+DATE: 06/22/2022
+
+* DONE Beacon DAO [2/2]
+
+The *Beacon DAO* is a decentralized autonomous organization implementing the Vision DAO, and a basic system for "bootstrapping" user applications from a minimal starting point. This means that a bare, basic implementation of the *Beacon DAO* can be released to the public, and be upgraded without any intervention, over time.
+
+- /ETA: Mid-July/
+- Assignee: *Dowland Aiello*
+  
+** DONE DAO Contracts
+The *Beacon DAO* implements a one-token-one-share voting system to modify payloads designating code that the *Beacon DAO* provides for the user. These contracts are available [[https://github.com/vision-dao/beacon-dao][here]].
+** DONE Web UI
+The primary use case of the *Beacon DAO* is loading further Vision OS modules. This requires executing code on a client's device. The *Beacon DAO* loader UI, available [[https://github.com/Vision-DAO/beacon-dao-loader][here]], implements this functionality.
