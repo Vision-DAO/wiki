@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-07-24 Sun 17:22 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vision OS Roadmap</title>
+<meta name="author" content="Dowland Aiello" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="../theme/rethink.css" />
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Vision OS Roadmap</h1>
+
+<div id="outline-container-org86f4ce1" class="outline-2">
+<h2 id="org86f4ce1"><span class="todo TODO">TODO</span> Vision Operating System <code>[0/10]</code></h2>
+<div class="outline-text-2" id="text-org86f4ce1">
+</div>
+
+<div id="outline-container-orgf55dfab" class="outline-3">
+<h3 id="orgf55dfab"><span class="todo TODO">TODO</span> Dependency-Based Discovery</h3>
+<div class="outline-text-3" id="text-orgf55dfab">
+<p>
+A module that provides a basic mechanism for discovering modules, based on detecting dependencies between applications and DAO's. Essentinnally a symbol table for applications written on Vision that DAO applications must import to be able to interface with them. Can be used to traverse the network and find new modules.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org33235a2" class="outline-3">
+<h3 id="org33235a2"><span class="todo TODO">TODO</span> Window Server API</h3>
+<div class="outline-text-3" id="text-org33235a2">
+<p>
+A module that allows modules provided by DAO's to render windows to the user's screen, in designated locations. Layout-agnostic: does not specify how, or where windows should be laid out.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3657fb8" class="outline-3">
+<h3 id="org3657fb8"><span class="todo TODO">TODO</span> UI Theme API <code>[0/1]</code></h3>
+<div class="outline-text-3" id="text-org3657fb8">
+<p>
+A module that allows Vision modules to alter, read, and specify new theming variables. Consumed by:
+</p>
+</div>
+
+<div id="outline-container-orgdd5d109" class="outline-4">
+<h4 id="orgdd5d109"><span class="todo TODO">TODO</span> Playful Vision Layout</h4>
+<div class="outline-text-4" id="text-orgdd5d109">
+<p>
+A module that implements a playful, user-friendly Vision workspace layout. Intended for basic, fairly limited usage of the platform, but very accessible to many users. Provides a default theme configuration tuned to Jenna Moon-Earle and Ha Tien Nguyen's <a href="https://cdn.discordapp.com/attachments/928680821571878922/967206294064873563/unknown.png">Vision Color Palette</a>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org977f2bb" class="outline-3">
+<h3 id="org977f2bb"><span class="todo TODO">TODO</span> Metadata Interface <code>[0/2]</code></h3>
+<div class="outline-text-3" id="text-org977f2bb">
+<p>
+A collection of modules that accept queries for different types of metadata, each identified by their respective module. Modules are unique in the metadata they produce.
+</p>
+</div>
+
+<div id="outline-container-org8ba1f3f" class="outline-4">
+<h4 id="org8ba1f3f"><span class="todo TODO">TODO</span> Module Payload Interface</h4>
+<div class="outline-text-4" id="text-org8ba1f3f">
+<p>
+A module that allows clients to query DAO's for a list of the modules they provide, and the IPLD DAG address of the WebAssembly payload associated with an identified module.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0668d3e" class="outline-4">
+<h4 id="org0668d3e"><span class="todo TODO">TODO</span> DAO Markdown Overview Interface</h4>
+<div class="outline-text-4" id="text-org0668d3e">
+<p>
+A metadata module that allows users to view an overview of a DAO, written in Markdown, and rendered to the browser.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8df85d3" class="outline-3">
+<h3 id="org8df85d3"><span class="todo TODO">TODO</span> Token Model <code>[0/1]</code></h3>
+<div class="outline-text-3" id="text-org8df85d3">
+<p>
+A module that implements ERC-20 tokens for the DAO's that use the module. A common dependency for modules that require a fungible unit of exchange.
+</p>
+</div>
+
+<div id="outline-container-org52f0911" class="outline-4">
+<h4 id="org52f0911"><span class="todo TODO">TODO</span> Treasury</h4>
+<div class="outline-text-4" id="text-org52f0911">
+<p>
+A module that implements proposal-bound transfers from an account owned by a Vision DAO. Relies on the Proposal System to determine when proposals have been finalized. Generic over any voting strategy. Allows for funding relationships, where a parent DAO can establish scheduled transfers from its treasury to a designated address.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga47a1f2" class="outline-3">
+<h3 id="orga47a1f2"><span class="todo TODO">TODO</span> Proposal System <code>[0/1]</code></h3>
+<div class="outline-text-3" id="text-orga47a1f2">
+<p>
+A module that implements a common interface for triggerable changes in the state of a module's metadata, specifically its module payloads.
+</p>
+</div>
+
+<div id="outline-container-orgeab1086" class="outline-4">
+<h4 id="orgeab1086"><span class="todo TODO">TODO</span> Voting Interface <code>[0/2]</code></h4>
+<div class="outline-text-4" id="text-orgeab1086">
+<p>
+A library of modules that implement various strategies for finalizing proposals on Vision. Assumes that each emits a <code>prop_finalized</code> event at some point.
+</p>
+</div>
+
+<ul class="org-ul">
+<li><a id="org5ee1075"></a><span class="todo TODO">TODO</span> Quadratic Voting<br />
+<div class="outline-text-5" id="text-org5ee1075">
+<p>
+A module that implements the quadratic voting strategy. N votes by a user costs \[n^2\] tokens. Depends on the <a href="#org8df85d3">token model</a> module to delegate votes to users in sensible proportions.
+</p>
+</div>
+</li>
+
+<li><a id="org89e3680"></a><span class="todo TODO">TODO</span> Share Voting<br />
+<div class="outline-text-5" id="text-org89e3680">
+<p>
+A module that implemenets a one-token-one-vote voting strategy. N votes by a user costs \[n\] tokens. Depends on the <a href="#org8df85d3">token model</a> module to allocate votes.
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf07a829" class="outline-3">
+<h3 id="orgf07a829"><span class="todo TODO">TODO</span> Parent-Child Discovery</h3>
+<div class="outline-text-3" id="text-orgf07a829">
+<p>
+A module that traverses funding relationships from one DAO to another. Used in conjunction with other discovery techniques.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7ed1378" class="outline-3">
+<h3 id="org7ed1378"><span class="todo TODO">TODO</span> Gossip Discovery</h3>
+<div class="outline-text-3" id="text-org7ed1378">
+<p>
+A module that allows clients to discover Vision DAO's that are completely unconnected to other DAO's (though such a circumstance is very unlikely). Operates in conjunction with other discovery techniques. Relies on libp2p gossipsub protocol.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd6e3ef8" class="outline-3">
+<h3 id="orgd6e3ef8"><span class="todo TODO">TODO</span> Visibility <code>[0/2]</code></h3>
+<div class="outline-text-3" id="text-orgd6e3ef8">
+<p>
+A suite of modules that makes DAO's visible, and easily discoverable by users. A front-end for underlying discovery mechanisms.
+</p>
+</div>
+
+<div id="outline-container-orgf065175" class="outline-4">
+<h4 id="orgf065175"><span class="todo TODO">TODO</span> Search</h4>
+<div class="outline-text-4" id="text-orgf065175">
+<p>
+A simple, markdown metadata-based fuzzy searching engine that displays DAO's on Vision that contain specified criteria.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org15af87a" class="outline-4">
+<h4 id="org15af87a"><span class="todo TODO">TODO</span> Mind Map</h4>
+<div class="outline-text-4" id="text-org15af87a">
+<p>
+An interactive display for discovered DAO's on Vision. Emphasizes the presence of financial and logical dependency relationships through a mind-map model.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2e4cfef" class="outline-3">
+<h3 id="org2e4cfef"><span class="todo TODO">TODO</span> Collaboration <code>[0/2]</code></h3>
+<div class="outline-text-3" id="text-org2e4cfef">
+<p>
+Tools available, per-DAO that allow for discussion of Vision activities without leaving Vision.
+</p>
+</div>
+
+<div id="outline-container-org8161f23" class="outline-4">
+<h4 id="org8161f23"><span class="todo TODO">TODO</span> Chat</h4>
+<div class="outline-text-4" id="text-org8161f23">
+<p>
+A live chat-room module that allows users to discuss the activities of a DAO without leaving Vision. Uses a naive user implementation based solely on Ethereum addresses, and blockie avatars. See 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga6456e8" class="outline-4">
+<h4 id="orga6456e8"><span class="todo TODO">TODO</span> Discsusion pages</h4>
+<div class="outline-text-4" id="text-orga6456e8">
+<p>
+Enhanced discussion pages reminiscent of Reddit, where users create threads, and post comments under threads. One board per DAO. Same user implementation as <a href="#org8161f23">chat</a> module.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 06/22/2022</p>
+<p class="author">Author: Dowland Aiello</p>
+<p class="date">Created: 2022-07-24 Sun 17:22</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
