@@ -66,7 +66,7 @@ export const Login = () => {
 				label: "Login with Metamask (1/2)",
 				executor: async () => {
 					const resp = await window.ethereum.request({
-						method: "eth_accounts",
+						method: "eth_requestAccounts",
 					});
 
 					console.log(resp);
