@@ -119,3 +119,44 @@
     flex-direction: column;
   }
 }
+
+.authcard {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.authcard>* {
+	margin: 0;
+	padding: 0;
+}
+
+.authcard>h1 {
+	margin-bottom: 1rem;
+}
+
+.loginBtn {
+	background-color: black;
+	color: white;
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: 0.1s;
+	margin-top: 1rem;
+}
+
+.loginBtn>p:hover {
+	opacity: 0.8;
+}
+
+.loginBtn>* {
+	padding: 0;
+	margin: 0;
+	transition: 0.1s;
+	text-transform: uppercase;
+	font-weight: bold;
+}

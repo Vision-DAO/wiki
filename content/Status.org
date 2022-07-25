@@ -1,6 +1,6 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="theme/rethink.css" />
 #+OPTIONS: toc:nil num:nil html-style:nil
-#+TITLE: Wiki
+#+TITLE: Status Dashboard
 #+AUTHOR: Dowland Aiello
 #+DATE: 06/19/2022
 
@@ -8,7 +8,7 @@
 
 ** About
 
-This is the Vision Development Wiki. It contains all the resources you need, in one place, to learn about and understand Vision from a technical perspective. It also provides a transparent view into Vision's development pipeline, and current progress.
+This is the Vision Development Dashboard. It provides a transparent view into Vision's development pipeline, and current progress.
 
 ** Status
 
