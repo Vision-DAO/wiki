@@ -2,7 +2,7 @@
 
 This repo implements a live tracking utility for software tasks. It uses emacs
 org mode both for task management, and for rendering the status tracker, which
-is available at [status.visinodaodev.com](https://status.visiondaodev.com).
+is available at [status.visiondaodev.com](https://status.visiondaodev.com).
 
 ## Development
 
