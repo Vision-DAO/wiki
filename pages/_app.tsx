@@ -1,13 +1,7 @@
 import "../styles/globals.css";
-import { Component } from "react";
+import { AppProps } from "next/app";
 
-export const MyApp = ({
-	Component,
-	pageProps,
-}: {
-	Component: Component;
-	pageProps: unknown[];
-}) => {
+export const MyApp = ({ Component, pageProps }: AppProps) => {
 	return <Component {...pageProps} />;
 };
 

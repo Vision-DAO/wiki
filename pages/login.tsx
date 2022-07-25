@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { MetaMaskInpageProvider } from "@metamask/providers";
 import React from "react";
 import styles from "../styles/Home.module.css";
 import { useState, useEffect } from "react";
@@ -13,27 +14,38 @@ interface FlowStep {
 	executor: () => void;
 }
 
+/**
+ * Satisfy typescript wanting typings for the window.ethereum instance.
+ */
+declare global {
+	interface Window {
+		ethereum: MetaMaskInpageProvider;
+	}
+}
+
 export const Login = () => {
-	const [status, setStatus] = useState<FlowStatus>(undefined);
-	const [authAddr, setAuthAddr] = useState<string>(undefined);
+	const [status, setStatus] = useState<FlowStatus | undefined>(undefined);
+	const [authAddr, setAuthAddr] = useState<string | undefined>(undefined);
 
 	useEffect(() => {
 		if (status === undefined && window.ethereum !== undefined)
 			setStatus("connecting");
 
 		if (window.ethereum) {
-			const handleAccountsChange = (accounts) => {
-				console.log(accounts);
-				setAuthAddr(accounts[0]);
+			const handleAccountsChange = (arg: unknown) => {
+				const accounts = arg as string[];
+
+				setAuthAddr(accounts[0] as string);
 			};
 
 			window.ethereum.on("accountsChanged", handleAccountsChange);
 
-			return () =>
+			return () => {
 				window.ethereum.removeListener(
 					"accountsChanged",
 					handleAccountsChange
 				);
+			};
 		}
 	});
 
@@ -53,11 +65,13 @@ export const Login = () => {
 			child = {
 				label: "Login with Metamask (1/2)",
 				executor: async () => {
-					const addrs = await window.ethereum.request({
+					const resp = await window.ethereum.request({
 						method: "eth_accounts",
 					});
 
-					console.log(addrs);
+					if (resp === undefined || resp === null) return;
+
+					const addrs = resp as string[];
 
 					setAuthAddr(addrs[0]);
 					setStatus("logging in");
@@ -69,6 +83,8 @@ export const Login = () => {
 			child = {
 				label: "Login with Metamask (2/2)",
 				executor: async () => {
+					if (authAddr === undefined) return;
+
 					const signature = await window.ethereum.request({
 						method: "personal_sign",
 						params: [LOGIN_ATTESTATION, authAddr, ""],

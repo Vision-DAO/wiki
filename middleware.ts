@@ -1,4 +1,4 @@
-import { utils } from "ethers";
+import { recoverAddress, id } from "ethers/lib/utils";
 
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
@@ -26,12 +26,11 @@ export const middleware = (request: NextRequest): NextResponse => {
 
 	if (sig === undefined) return NextResponse.redirect(`${url.origin}/login`);
 
-	const msg = utils.id(
+	const msg = id(
 		`\x19Ethereum Signed Message:\n${LOGIN_ATTESTATION.length}${LOGIN_ATTESTATION}`
 	);
 
-	if (WHITELISTED.has(utils.recoverAddress(msg, sig)))
-		return NextResponse.next();
+	if (WHITELISTED.has(recoverAddress(msg, sig))) return NextResponse.next();
 
 	return NextResponse.redirect(`${url.origin}/login`);
 };
