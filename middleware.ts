@@ -15,7 +15,7 @@ export const middleware = (request: NextRequest): NextResponse => {
 	const url = request.nextUrl;
 
 	if (request.nextUrl.pathname === "/") {
-		return NextResponse.rewrite(`${url.origin}/Status.html`);
+		return NextResponse.redirect(`${url.origin}/Status.html`);
 	}
 
 	// Unprivileged resources

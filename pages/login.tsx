@@ -69,6 +69,8 @@ export const Login = () => {
 						method: "eth_accounts",
 					});
 
+					console.log(resp);
+
 					if (resp === undefined || resp === null) return;
 
 					const addrs = resp as string[];
