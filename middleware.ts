@@ -10,6 +10,7 @@ const WHITELISTED = new Set([
 	"0xd3Fe8b4f1CF50E27fE8707921d38B77F09aC6Db8",
 	"0xe7FBEE6F331E209a6C4B2b1f8Eb382d54F438B76",
 	"0x39bee5D198c7F83281C1402A845eB8E2f4622BA2",
+	"0xcFdDa7a46853EeEdA37C4C61f52f93a9D7cb2F24",
 ]);
 
 export const middleware = (request: NextRequest): NextResponse => {
