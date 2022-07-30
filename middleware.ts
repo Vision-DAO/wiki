@@ -6,6 +6,7 @@ import type { NextRequest } from "next/server";
 const LOGIN_ATTESTATION = "I am logging in to Vision Status Dashboard.";
 const WHITELISTED = new Set([
 	"0xdc36FA7961324b2403e4DD8B9c3bdd27c725E693",
+        "0xc32dC5713162479dfD0e0B7E54780DcF23A58fc7",
 	"0xecDd164e108EE04736EE264e00B7a024267fc62b",
 	"0xd3Fe8b4f1CF50E27fE8707921d38B77F09aC6Db8",
 	"0xe7FBEE6F331E209a6C4B2b1f8Eb382d54F438B76",
