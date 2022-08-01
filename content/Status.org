@@ -14,6 +14,6 @@ This is the Vision Development Dashboard. It provides a transparent view into Vi
 
 | Current Task | Description                                                                                                                                                    | Date Begun | ETA      |
 |--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+----------|
-| VVM          | Implementation of a system that can facilitate message-passing between modules, manage permissions for user apps, and execute dynamic code with minimal bloat. | 07/08/22   | 07/31/22 |
+| Tokenomics Sim | Formal proof of Vision's tokenomics properties using computer-aided simulation, and the Lean language. | 08/01/22 | 08/05/22 |
 
 More information on the status of Vision development can be found on the [[file:Roadmap.org::*Roadmap][roadmap document]].
