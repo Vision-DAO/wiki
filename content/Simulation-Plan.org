@@ -4,7 +4,7 @@
 
 * Goals
 
-Our goals in simulating Vision's tokenomics include understanding Vision's potential utility given our current road-map, which of Vision's features produce the best utility, and Vision's revenue streams.
+Simulating Vision tokenomics enables understanding of the potential utility of the platform, including which of Vision's features are the most useful, and which revenue streams have the greatest potential to scale.
 
 We will collect data on the following:
 
@@ -17,7 +17,7 @@ We will collect data on the following:
 
 *Overall utility*, in an abstract sense, is how much Vision users gain and lose.
 
-To understand overall utility, we will be collecting market efficiency data on various file storage systems, as an effective file storage system is crucial for a decentralized service like Vision. We will also be trying to understand how Vision is able to handle various levels of voter fraud and the abilities of the Enforcer-jury model.
+To understand overall utility, we will collect market efficiency data on various file storage systems, as an effective file storage system is crucial for a decentralized service like Vision. We will also investigate how Vision handles various levels of voter fraud and the abilities of the Enforcer-jury model.
 
 Specific data points may include:
 
@@ -29,23 +29,23 @@ Specific data points may include:
   
 ** Token distribution
 
-*Token distribution* is a measure concerned with where the Vision token, ~VIS~ ends up. Understanding token distribution allows us to answer questions like "Do people want to buy ~VIS~?" and "Who has control over Vision?"
+*Token distribution* is a measure of the movement and ownership of ~VIS~. Understanding token distribution allows us to answer questions like "Do people want to buy ~VIS~?" and "Who has control over Vision?"
 
 Specific data points may include:
 
+- Distribution of ~VIS~ among all users
 - A statistically random user's chance to buy ~VIS~
 - Average user's volume of ~VIS~
-- Distribution of ~VIS~ among all users
   
 ** Deflation
 
-*Deflation* reflects how much ~VIS~ gets burned. Our goal is to understand which tokenomic policies lead to the most advantageous amount of deflation for maximum user utility.
+*Deflation* reflects how much ~VIS~ gets burned. Our goal is to understand which policies lead to the most advantageous amount of deflation for maximum user utility.
 
 Specific data points may include:
 
 - Volume of ~VIS~ burned
 - Which user actions lead to ~VIS~ being burned
-- Market changes due to the value of ~VIS~ changing.
+- Market changes due to the value of ~VIS~ changing. For example, the supply of storage in the pinning market.
   
 ** User growth
 
@@ -53,12 +53,22 @@ Specific data points may include:
 
 Specific data points may include:
 
-- Chance a user is going to be discouraged or encouraged to use vision given the deadweight loss in the storage pricing market
-- Chance a user is going to be discouraged or encouraged to use vision given the value of ~VIS~
-- Chance a user is going to be discouraged or encouraged to use vision given how centralized/decentralized the distribution of ~VIS~ is.
+- Chance a user is discouraged or encouraged to use Vision given the deadweight loss in the storage pricing market
+- Chance a user is discouraged or encouraged to use Vision given the value of VIS
+- Chance a user is discouraged or encouraged to use Vision given how centralized/decentralized the distribution of VIS is.
   
 * Methods
 
 The methods used to simulate Vision's tokenomics will use simulation methods such as Monte Carlo via radCad (a sort of successor to cadCad) combined with statistical analysis methods such as Bayesian inference.
 
-We will have different simulation layers for each data category listed in the [[Goals]] section. These layers can be combined to strengthen predictive power. This makes it possible to extend the simulation as more data gets provided from live Vision tests (such as Testnet) or elsewhere.
+We include different simulation layers for each data category listed in the [[Goals]] section. These layers can be combined to strengthen predictive power. This makes it possible to extend the simulation as more data gets provided from live Vision tests (such as Testnet) or elsewhere.
+
+| *Data Category*      | *Notes*                                              |
+|--------------------+----------------------------------------------------|
+| Overall Utility    | Measures the markets inside Vision.                |
+|--------------------+----------------------------------------------------|
+| Token Distribution | Measures how users interact with the VIS token.    |
+|--------------------+----------------------------------------------------|
+| Deflation          | Measures properties of VIS token itself.           |
+|--------------------+----------------------------------------------------|
+| User Growth        | Measures how useful Vision features are for users. |
