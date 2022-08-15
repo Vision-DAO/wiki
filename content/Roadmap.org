@@ -14,7 +14,7 @@ The *Beacon DAO* is a decentralized autonomous organization implementing the Vis
 - See the [[file:phases/BeaconDAO.org::*Beacon DAO][roadmap]].
 
 ** TODO Vision Virtual Machine (~VVM~) [0/4]
-DEADLINE: <2022-07-31 Sun>
+DEADLINE: <2022-08-26 Fri>
 
 The Vision Virtual Machine is a module for the *Beacon DAO* that allows for general computation, and execution of arbitrary code with access to a limited, event-driven API for system-call-like functionality.
 
@@ -23,7 +23,7 @@ The Vision Virtual Machine is a module for the *Beacon DAO* that allows for gene
 - See the [[file:phases/VVM.org::*Vision Virtual Machine][roadmap]].
   
 ** TODO Vision Operating System [0/10]
-DEADLINE: <2022-08-31 Wed>
+DEADLINE: <2022-09-30 Fri>
 
 The Vision Operating System constitutes all of the major baseline features that are necessary for Vision end-users to begin operating DAO's and developing Vision applications on the platform.
 

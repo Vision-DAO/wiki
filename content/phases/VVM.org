@@ -9,7 +9,7 @@ DEADLINE: <2022-07-31 Sun>
 
 The Vision Virtual Machine is a module for the *Beacon DAO* that allows for general computation, and execution of arbitrary code with access to a limited, event-driven API for system-call-like functionality.
 
-- /ETA: Late-July/
+- /ETA: Late-August/
 - Assignee: *Dowland Aiello*, *Lawrence Qupty*
   
 ** TODO Main Event Loop / Scheduler
