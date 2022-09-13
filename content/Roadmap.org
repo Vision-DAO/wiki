@@ -10,7 +10,11 @@ The *Beacon DAO* is a decentralized autonomous organization implementing the Vis
 
 - /ETA: Mid-July/
 - Assignee: *Dowland Aiello*
-- See the [[file:phases/BeaconDAO.org::*Beacon DAO][roadmap]].
+
+*** DONE DAO Contracts
+The *Beacon DAO* implements a one-token-one-share voting system to modify payloads designating code that the *Beacon DAO* provides for the user. These contracts are available [[https://github.com/vision-dao/beacon-dao][here]].
+*** DONE Web UI
+The primary use case of the *Beacon DAO* is loading further Vision OS modules. This requires executing code on a client's device. The *Beacon DAO* loader UI, available [[https://github.com/Vision-DAO/beacon-dao-loader][here]], implements this functionality.
 
 ** TODO Vision Virtual Machine (~VVM~) [0/4]
 DEADLINE: <2022-08-26 Fri>
@@ -19,8 +23,23 @@ The Vision Virtual Machine is a module for the *Beacon DAO* that allows for gene
 
 - /ETA: Early-October/
 - Assignee: *Dowland Aiello*, *Lawrence Qupty*
-- See the [[file:phases/VVM.org::*Vision Virtual Machine][roadmap]].
   
+*** TODO Main Event Loop / Scheduler
+
+A process scheduler that uses an event loop to facilitate system calls, and communication between processes. Identifies processes on a per-DAO basis, where each instance of the process is unique, and identified by a hexadecimal address. Rapidly toggles between processes to emulate time-sharing.
+
+*** TODO ABI Capabilities System
+
+An import-based system that signals capabilities of a loaded module, and which events it is capable of emitting. Will be implemented via WASM module imports, likely. Bindings for languages required.S
+
+*** TODO Root Discovery Module
+
+A base module included with the Beacon DAO that queues modules for instantiation by the VVM.
+
+*** TODO Granular Consent Model
+
+A kernel module that implements a system for acquiring user consent, based on the messages that an application can emit, which represent the API's that it has access to (e.g., /"x application is requesting access to your wallet"/).
+
 ** TODO Vision Operating System [0/10]
 DEADLINE: <2022-09-30 Fri>
 
@@ -28,7 +47,91 @@ The Vision Operating System constitutes all of the major baseline features that 
 
 - /ETA: Late-October/
 - Assignee: *Dowland Aiello*, *Lawrence Qutpy*
-- See the [[file:phases/VisionOS.org::*Vision Operating System][roadmap]].
+
+*** TODO Dependency-Based Discovery
+
+A module that provides a basic mechanism for discovering modules, based on detecting dependencies between applications and DAO's. Essentinnally a symbol table for applications written on Vision that DAO applications must import to be able to interface with them. Can be used to traverse the network and find new modules.
+
+*** TODO Window Server API
+
+A module that allows modules provided by DAO's to render windows to the user's screen, in designated locations. Layout-agnostic: does not specify how, or where windows should be laid out.
+
+*** TODO UI Theme API [0/1]
+
+A module that allows Vision modules to alter, read, and specify new theming variables. Consumed by:
+
+**** TODO Playful Vision Layout
+
+A module that implements a playful, user-friendly Vision workspace layout. Intended for basic, fairly limited usage of the platform, but very accessible to many users. Provides a default theme configuration tuned to Jenna Moon-Earle and Ha Tien Nguyen's [[https://cdn.discordapp.com/attachments/928680821571878922/967206294064873563/unknown.png][Vision Color Palette]].
+
+*** TODO Metadata Interface [0/2]
+
+A collection of modules that accept queries for different types of metadata, each identified by their respective module. Modules are unique in the metadata they produce.
+
+**** TODO Module Payload Interface
+
+A module that allows clients to query DAO's for a list of the modules they provide, and the IPLD DAG address of the WebAssembly payload associated with an identified module.
+
+**** TODO DAO Markdown Overview Interface
+
+A metadata module that allows users to view an overview of a DAO, written in Markdown, and rendered to the browser.
+
+*** TODO Token Model [0/1]
+
+A module that implements ERC-20 tokens for the DAO's that use the module. A common dependency for modules that require a fungible unit of exchange.
+
+**** TODO Treasury
+
+A module that implements proposal-bound transfers from an account owned by a Vision DAO. Relies on the Proposal System to determine when proposals have been finalized. Generic over any voting strategy. Allows for funding relationships, where a parent DAO can establish scheduled transfers from its treasury to a designated address.
+
+*** TODO Proposal System [0/1]
+
+A module that implements a common interface for triggerable changes in the state of a module's metadata, specifically its module payloads.
+
+**** TODO Voting Interface [0/2]
+
+A library of modules that implement various strategies for finalizing proposals on Vision. Assumes that each emits a ~prop_finalized~ event at some point.
+
+***** TODO Quadratic Voting
+
+A module that implements the quadratic voting strategy. N votes by a user costs \[n^2\] tokens. Depends on the [[*Token Model][token model]] module to delegate votes to users in sensible proportions.
+
+***** TODO Share Voting
+
+A module that implemenets a one-token-one-vote voting strategy. N votes by a user costs \[n\] tokens. Depends on the [[*Token Model][token model]] module to allocate votes.
+
+*** TODO Parent-Child Discovery
+
+A module that traverses funding relationships from one DAO to another. Used in conjunction with other discovery techniques.
+
+*** TODO Gossip Discovery
+
+A module that allows clients to discover Vision DAO's that are completely unconnected to other DAO's (though such a circumstance is very unlikely). Operates in conjunction with other discovery techniques. Relies on libp2p gossipsub protocol.
+
+*** TODO Visibility [0/2]
+
+A suite of modules that makes DAO's visible, and easily discoverable by users. A front-end for underlying discovery mechanisms.
+
+**** TODO Search
+
+A simple, markdown metadata-based fuzzy searching engine that displays DAO's on Vision that contain specified criteria.
+
+**** TODO Mind Map
+
+An interactive display for discovered DAO's on Vision. Emphasizes the presence of financial and logical dependency relationships through a mind-map model.
+
+*** TODO Collaboration [0/2]
+
+Tools available, per-DAO that allow for discussion of Vision activities without leaving Vision.
+
+**** TODO Chat
+
+A live chat-room module that allows users to discuss the activities of a DAO without leaving Vision. Uses a naive user implementation based solely on Ethereum addresses, and blockie avatars. See 
+
+**** TODO Discsusion pages
+
+Enhanced discussion pages reminiscent of Reddit, where users create threads, and post comments under threads. One board per DAO. Same user implementation as [[*Chat][chat]] module.
+
   
 ** TODO Ecosystem Features [0/4]
 DEADLINE: <2022-10-31 Mon>
@@ -36,24 +139,142 @@ DEADLINE: <2022-10-31 Mon>
 Modules that implement important qualify-of-life features, and features that will greatly increase the growth rate of the Vision ecosystem by lowering barriers to entry, and enhancing the Vision experience overall.
 
 - /ETA: Dec 2022/
-- See the [[file:phases/Ecosystem.org::*Ecosystem Features][roadmap]].
 
+*** TODO Web-Accessible Staking / Pinning Interface [0/1]
+Implements a web-facing interface to the Vision pinning marketplace and quadratic voting enforcement mechanism, for use by any Vision user. Expands accessibility of staking features from power-users to all Vision users.
+
+**** TODO Stake Pooling
+
+An expansion to the Vision pinning marketplace that allows users to pool together staking resources for use by a delegated validator. Allows users that do not have access to a persistent internet connection to reap staking rewards, and confer risk to another party.
+
+*** TODO Expanded Module Language Support [0/3]
+A suite of upgrades to the Vision module system that make developing Vision modules accessible to developers with a wider array of backgrounds and technical experience.
+
+**** TODO Enhanced Bindings for Popular Languages
+
+Enhance developer user experience by providing convenient wrappers for Vision API functionality in popular languages. Aim for feature parity across all "enhanced-support" languages.
+
+**** TODO Expanded Documentation & Examples
+
+Prepare expanded documentation, and example materials for Vision developers in popular languages, including: TypeScript, Python, Rust, and C++.
+
+**** TODO "No-Code" / Block-coding Module Development Interface
+
+Implement a block coding-based Vision module generator, accessible to audiences with very little blockchain, or coding experience.
+
+*** TODO Vision Decentralized ID [0/2]
+A Vision module that implements the W3C DID standard, for usage in Vision collaborative tools, for proposal and DAO metadata, and for upcoming social features.
+
+**** TODO Vision User Profiles
+
+A vision module that allows users to create non-fungible identity DAO's that represent the concept of themselves. Allows identities to be transferred between accounts. Allows for social recovery of a user's identity by delegating ownership logic to a DAO formed by a user's friends and family, for example.
+
+**** TODO Expanded social functions
+
+- [ ] Functionality for following other users
+- [ ] Viewing statistics about a particular user, including their "idea net worth"
+- [ ] Visualizing relationships between users through Vision's "mind map"
+- Generalizable to enhance digital money and web3 applications in general by allowing cryptocurrency users, regardless of blockchain, to track interactions with each other, relationships, and identities, without sharing infrastructure like the Ethereum Name Service
+  
 ** TODO Private Test Net [0/2]
 Vision's test-net release will be gradually rolled out in two phases: a private test-net release, and a public test-net release. The former will be largely closed-source, operate in a sandboxed environment, and be accessible to only trusted partners.
 
 - /ETA: Dec 2022/
-- See the [[file:phases/PrivateTestnet.org::*Private Test Net][roadmap]].
+
+*** TODO Enterprise infrastructure
+- Develop sandboxed deployment environments that shield as much of the Vision codebase as possible from clients, while exposing features that require testing
+*** TODO Field Testing
+- Discover bugs, and stress-test Vision features in a sandboxed environment with trusted enterprise partners, including Gaza SkyGeeks, and TechAid + IBM
+- Offer services for developing Vision solutions with desirable partners, and asissting with their deployments
+- Continuously deploy patched instances of the Vision software after internal testing
 
 ** TODO Public Test Net [0/4]
 - /ETA: Q1 2023/
-- See the [[file:phases/PublicTestnet.org::*Public Test Net][roadmap]].
+
+*** TODO Cash Bug Bounties
+Use dework, and alternative platforms, like gitcoin, to set bounties for known, and unknown bugs. Estimated budget up to $5,000.
+*** TODO Gamified Achievement System
+As an alternative to cash bug bounties, award NFT-like achievements to early Vision adopters for contributions including, but not limited to:
+
+- [ ] Participating in the Vision Public Beta
+- [ ] Submitting a verified bug report
+- [ ] Creating a DAO on the Vision Public Beta
+
+These achievements will be displayed as badges via a Vision module that can be consumed by Vision OS layouts. Will be enabled by default in the Vision [[file:VisionOS.org::*Playful Vision Layout][playful vision layout]]. Badges will be tradable on public marketplaces if users wish to monetize their accomplishments.
+*** TODO Developer Support
+Offer support on Vision forums, including Discord, and Vision itself, for developers and DAO participants on Vision.
+
+**** TODO Hackathon
+
+Host at least one hackathon during the Vision Public Test Net launch featuring workshops, presentations from Vision itself, workshops for how to use Vision, and demonstrations from Vision community members. Host presentations, and judging to dole out cash prizes for designated Vision DAO themes: community impact DAO's, education DAO's, and governance DAO's, for example.
+
+**** TODO Digital Dev Outreach
+
+- Live Q&A sessions
+- Office hours on digital platforms, including Discord
+- Responsive support on GitHub issues, Discord, and on Vision itself
+  - Vision Community DAO to organize efforts
 
 ** TODO Public Main Net [0/3]
 - /ETA: Q3 2023/
-- See the [[file:phases/Mainnet.org::*Public Main Net][roadmap]].
+
+*** TODO Code Reviews, Auditing
+Perform internal, and external audits of core Vision components, including all modules developed in-house. Resolve any security concerns prior to release of the public test net, including ones that were uncovered in the prior private testnet. Aim for public transparency with audit results prior to public testnet release.
+*** TODO Open-Source Codebase
+Sanitize the Vision codebase for any operations vulnerabilities, and make it publicly accessible within 1 month prior to the Vision public mainnet release. Address any further security vulnerabilities discovered by the community as they arise.
+*** TODO Testnet to Mainnet Migration
+Persist user achievements, and basic social data, like friend information, followers, and biographies from the Vision testnet to the Vision mainnet. Allow as much data that was created on the Vision testnet to migrate to the Vision mainnet as possible. *Main exclusion:* VIS tokens. The distribution of VIS tokens on the Vision mainnet will be completely aligned with the platform's tokenomics document, and will not respect and balances held during the testnet.
   
 ** TODO Post-Release [0/5]
 General goals for Vision DAO after its mainnet release, including strategies for decentralizing, and desired partnerships.
 
 - /ETA: Q4 2023/
-- See the [[file:phases/PostRelease.org::*Post-Release][roadmap]].
+
+*** TODO Vision OS Long-Term Support [0/2]
+Post-release, the Vision DAO will be solely responsible with ensuring the security, and maintaining the Vision Operating System, by patching bugs, and implementing needed features as they arise.
+
+**** TODO Market Tools
+
+Provide utilities for users to leverage market activity across Vision Ideas and Proposals to recognize opportunities in the Vision marketplace, assess risk, and access the most relevant information.
+
+- [ ] Trading volume-based search tools
+- [ ] Market data integration with decentralized exchange analytics providers, including The Graph
+  
+**** TODO Blockchain Agnosticism
+
+- [ ] Implement a generalized API for web3 operations, including: executing smart contract code, loading smart contracts payloads, making transactions, and filtering through blockchain statistics. Will allow Vision users to use whatever blockchain they like, if they believe that Poylgon isn't sufficiently "eco-friendly," for example.
+- [ ] Implement a generalized p2p networking API for Vision DAO's to communicate between users, and discover information that isn't provided by default modules
+  
+*** TODO Vision "API" [0/2]
+Provide hosted, and client-side API's for interfacing with the Vision network. Aim to abstract two main Vision features for use in external applications:
+
+**** TODO Vision ID API
+
+Provide an API that:
+- [ ] Allows users to carry persistent Vision identities between sites
+- [ ] Allows developers to consume users' Vision identities by requesting granular permissions
+- [ ] Allow developers to author new Vision ideas from alternate UI's: highlight a comment, and create a Vision Idea; display market information for Ideas of comments on your site; display profile information using Vision
+- [ ] Allows users to inject Vision functionality via a browser extension, in relevant places (i.e., previous use cases, but implemented by the user)
+
+**** TODO Vision Storage API
+
+Allow third parties to store their data by tokenizing on Vision. Drop-in replacement for Amazon S3.
+
+*** TODO Vision Ideas ETF
+Implement a DAO on Vision that tracks the top 100 Vision Ideas by marketcap. Similar to an ETF, but for Vision. Allow users to gain exposure to a "basket of assets" on Vision. Generalize to allow derivatives of any number of Vision Ideas to be created, and managed as Vision DAO's.
+*** TODO Market Operations [0/3]
+To facilitate Vision's function as the "marketplace of ideas," Vision will take on a role as a "market maker," and angel investor for Ideas on vision, providing liquidity by:
+
+- [ ] Identifying and executing arbitrage opportunities
+- [ ] Identifying valuable investment opportunities through fundamental analysis
+- [ ] Doling out grants, and bounties for valuable public works, further decentralizing Vision
+*** TODO Enterprise Tooling [0/2]
+The initial phase of Vision's development centers around the Vision Operating System, which provides most of the functionality that the average consumer requires to run a DAO on Vision.  One of Vision DAO's main goals post-release will be to create tools that facilitate enterprise deployments of Vision DAO's.
+
+**** TODO Collaborative Tooling
+
+Vision's collaborative tools present a compelling alternative to existing tools like Slack, and Microsoft Teams. However, Vision's collaborative tools are often used in conjunction with a DAO token model, including a treasury, and other tools. Enterprises that use Vision should be able to opt into these features, and become increasingly DAO-like. For example, enterprises that use Vision's collaborative tools could start out as DAO's that have no treasury, no voting, and use a Vision ID-based authentication system to access collaboration on Vision.
+
+**** TODO Vision "as a service"
+
+One drawback to cryptocurrency and web3 deployments is that they present variable, and unpredictable costs. This can be especially unappealing for enterprises, who could pay anything from nothing, to thousands of dollars for application deployments, depending on network conditions. To meet this need, Vision will provide hosted "cloud" instances of Vision at reliable costs, pocketing the difference, or footing the bill, between its clients' contract and the gas / pinning fees that it pays.
