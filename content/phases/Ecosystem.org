@@ -6,7 +6,7 @@
 
 * TODO Ecosystem Features [0/3]
 
-DEADLINE: <2022-10-31 Mon>
+DEADLINE: <2022-11-31 Mon>
 
 Modules that implement important qualify-of-life features, and features that will greatly increase the growth rate of the Vision ecosystem by lowering barriers to entry, and enhancing the Vision experience overall.
 

@@ -1,7 +1,6 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="theme/rethink.css" />
 #+OPTIONS: toc:nil num:nil html-style:nil
-#+TITLE: Roadmap
-#+AUTHOR: Dowland Aiello
+#+TITLE: Vision Technical Roadmap
 #+DATE: 06/19/2022
 
 * Roadmap [1/8]
@@ -18,7 +17,7 @@ DEADLINE: <2022-08-26 Fri>
 
 The Vision Virtual Machine is a module for the *Beacon DAO* that allows for general computation, and execution of arbitrary code with access to a limited, event-driven API for system-call-like functionality.
 
-- /ETA: Late-July/
+- /ETA: Early-October/
 - Assignee: *Dowland Aiello*, *Lawrence Qupty*
 - See the [[file:phases/VVM.org::*Vision Virtual Machine][roadmap]].
   
@@ -27,7 +26,7 @@ DEADLINE: <2022-09-30 Fri>
 
 The Vision Operating System constitutes all of the major baseline features that are necessary for Vision end-users to begin operating DAO's and developing Vision applications on the platform.
 
-- /ETA: Late-August/
+- /ETA: Late-October/
 - Assignee: *Dowland Aiello*, *Lawrence Qutpy*
 - See the [[file:phases/VisionOS.org::*Vision Operating System][roadmap]].
   
@@ -36,13 +35,13 @@ DEADLINE: <2022-10-31 Mon>
 
 Modules that implement important qualify-of-life features, and features that will greatly increase the growth rate of the Vision ecosystem by lowering barriers to entry, and enhancing the Vision experience overall.
 
-- /ETA: Oct 2022/
+- /ETA: Dec 2022/
 - See the [[file:phases/Ecosystem.org::*Ecosystem Features][roadmap]].
 
 ** TODO Private Test Net [0/2]
 Vision's test-net release will be gradually rolled out in two phases: a private test-net release, and a public test-net release. The former will be largely closed-source, operate in a sandboxed environment, and be accessible to only trusted partners.
 
-- /ETA: Oct - Dec 2022/
+- /ETA: Dec 2022/
 - See the [[file:phases/PrivateTestnet.org::*Private Test Net][roadmap]].
 
 ** TODO Public Test Net [0/4]
