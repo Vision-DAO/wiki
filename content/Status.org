@@ -12,8 +12,8 @@ This is the Vision Development Dashboard. It provides a transparent view into Vi
 
 ** Status
 
-| Current Task | Description                                                                                                                                                    | Date Begun | ETA      |
-|--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+----------|
-| Tokenomics Sim | Formal proof of Vision's tokenomics properties using computer-aided simulation, and the Lean language. | 08/01/22 | 08/05/22 |
+| Current Task           | Description                                                                            | Date Begun | ETA      |
+|------------------------+----------------------------------------------------------------------------------------+------------+----------|
+| Vision Virtual Machine | Implementation of the Vision Virtual Machine and precursory Operating System features. | 09/01/22   | 12/12/22 |
 
 More information on the status of Vision development can be found on the [[file:Roadmap.org::*Roadmap][roadmap document]].
