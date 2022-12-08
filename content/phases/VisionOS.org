@@ -9,7 +9,7 @@
 DEADLINE: <2022-12-30 Fri>
 ** TODO Dependency-Based Discovery
 
-A module that provides a basic mechanism for discovering modules, based on detecting dependencies between applications and DAO's. Essentinnally a symbol table for applications written on Vision that DAO applications must import to be able to interface with them. Can be used to traverse the network and find new modules.
+A module that provides a basic mechanism for discovering modules, based on detecting dependencies between applications and DAO's. Essentially a symbol table for applications written on Vision that DAO applications must import to be able to interface with them. Can be used to traverse the network and find new modules.
 
 ** TODO Window Server API
 
@@ -21,7 +21,7 @@ A module that allows Vision modules to alter, read, and specify new theming vari
 
 *** TODO Playful Vision Layout
 
-A module that implements a playful, user-friendly Vision workspace layout. Intended for basic, fairly limited usage of the platform, but very accessible to many users. Provides a default theme configuration tuned to Jenna Moon-Earle and Ha Tien Nguyen's [[https://cdn.discordapp.com/attachments/928680821571878922/967206294064873563/unknown.png][Vision Color Palette]].
+A module that implements a playful, user-friendly Vision workspace layout. Intended for basic, fairly limited usage of the platform, but very accessible to many users. Provides a default theme configuration tuned to the [[https://cdn.discordapp.com/attachments/928680821571878922/967206294064873563/unknown.png][Vision Color Palette]].
 
 ** TODO Metadata Interface [0/2]
 
@@ -53,11 +53,11 @@ A library of modules that implement various strategies for finalizing proposals 
 
 **** TODO Quadratic Voting
 
-A module that implements the quadratic voting strategy. N votes by a user costs \[n^2\] tokens. Depends on the [[*Token Model][token model]] module to delegate votes to users in sensible proportions.
+A module that implements the quadratic voting strategy. N votes by a user cost \[n^2\] tokens. Depends on the [[*Token Model][token model]] module to delegate votes to users in sensible proportions.
 
 **** TODO Share Voting
 
-A module that implemenets a one-token-one-vote voting strategy. N votes by a user costs \[n\] tokens. Depends on the [[*Token Model][token model]] module to allocate votes.
+A module that implements a one-token-one-vote voting strategy. N votes by a user cost \[n\] tokens. Depends on the [[*Token Model][token model]] module to allocate votes.
 
 ** TODO Parent-Child Discovery
 
@@ -81,13 +81,13 @@ An interactive display for discovered DAO's on Vision. Emphasizes the presence o
 
 ** TODO Collaboration [0/2]
 
-Tools available, per-DAO that allow for discussion of Vision activities without leaving Vision.
+Tools available, per DAO that allow for discussion of Vision activities without leaving Vision.
 
 *** TODO Chat
 
-A live chat-room module that allows users to discuss the activities of a DAO without leaving Vision. Uses a naive user implementation based solely on Ethereum addresses, and blockie avatars. See 
+A live chat-room module that allows users to discuss the activities of a DAO without leaving Vision. Uses a naive user implementation based solely on Ethereum addresses, and blockie avatars.
 
-*** TODO Discsusion pages
+*** TODO Discussion pages
 
 Enhanced discussion pages reminiscent of Reddit, where users create threads, and post comments under threads. One board per DAO. Same user implementation as [[*Chat][chat]] module.
 

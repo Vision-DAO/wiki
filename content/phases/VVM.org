@@ -19,7 +19,7 @@ A process scheduler that uses an event loop to facilitate system calls, and comm
 
 ** TODO ABI Capabilities System
 
-An import-based system that signals capabilities of a loaded module, and which events it is capable of emitting. Will be implemented via WASM module imports, likely. Bindings for languages required.S
+An import-based system that signals capabilities of a loaded module, and which events it is capable of emitting. Will be implemented via WASM module imports, likely. Bindings for languages required.
 
 ** TODO Root Discovery Module
 

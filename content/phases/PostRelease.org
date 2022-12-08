@@ -11,7 +11,7 @@ General goals for Vision DAO after its mainnet release, including strategies for
 - /ETA: Q4 2023/
 
 ** TODO Vision OS Long-Term Support [0/2]
-Post-release, the Vision DAO will be solely responsible with ensuring the security, and maintaining the Vision Operating System, by patching bugs, and implementing needed features as they arise.
+Post-release, the Vision DAO will be solely responsible for ensuring the security of, and maintaining the Vision Operating System, by patching bugs, and implementing needed features as they arise.
 
 *** TODO Market Tools
 
@@ -22,7 +22,7 @@ Provide utilities for users to leverage market activity across Vision Ideas and 
   
 *** TODO Blockchain Agnosticism
 
-- [ ] Implement a generalized API for web3 operations, including: executing smart contract code, loading smart contracts payloads, making transactions, and filtering through blockchain statistics. Will allow Vision users to use whatever blockchain they like, if they believe that Poylgon isn't sufficiently "eco-friendly," for example.
+- [ ] Implement a generalized API for web3 operations, including: executing smart contract code, loading smart contracts payloads, making transactions, and filtering through blockchain statistics. Will allow Vision users to use whatever blockchain they like, if they believe that Ethereum isn't sufficiently "eco-friendly," for example.
 - [ ] Implement a generalized p2p networking API for Vision DAO's to communicate between users, and discover information that isn't provided by default modules
   
 ** TODO Vision "API" [0/2]

@@ -20,7 +20,7 @@ Implements a web-facing interface to the Vision pinning marketplace and quadrati
 An expansion to the Vision pinning marketplace that allows users to pool together staking resources for use by a delegated validator. Allows users that do not have access to a persistent internet connection to reap staking rewards, and confer risk to another party.
 
 ** TODO Expanded Module Language Support [0/3]
-A suite of upgrades to the Vision module system that make developing Vision modules accessible to developers with a wider array of backgrounds and technical experience.
+A suite of upgrades to the Vision module system that makes developing Vision modules accessible to developers with a wider array of backgrounds and technical experience.
 
 *** TODO Enhanced Bindings for Popular Languages
 
