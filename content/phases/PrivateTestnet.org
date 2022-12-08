@@ -12,7 +12,7 @@ Vision's test-net release will be gradually rolled out in two phases: a private 
 ** TODO Enterprise infrastructure
 - Develop sandboxed deployment environments that shield as much of the Vision codebase as possible from clients, while exposing features that require testing
 ** TODO Field Testing
-- Discover bugs, and stress-test Vision features in a sandboxed environment with trusted partners, including UW Blockchain
+- Discover bugs, and stress-test Vision features in a sandboxed environment with trusted partners, including UW Blockchain, Crypto Diamond Subs, Conflux Community
 - Offer services for developing Vision solutions with desirable partners, and assisting with their deployments
 - Continuously deploy patched instances of the Vision software after internal testing
 
