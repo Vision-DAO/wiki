@@ -4,15 +4,16 @@
 #+AUTHOR: Dowland Aiello
 #+DATE: 06/22/2022
 
-* TODO Vision Virtual Machine [0/4]
-DEADLINE: <2022-07-31 Sun>
+* TODO Vision Virtual Machine [2/4]
+DEADLINE: <2022-12-09 Fri>
 
 The Vision Virtual Machine is a module for the *Beacon DAO* that allows for general computation, and execution of arbitrary code with access to a limited, event-driven API for system-call-like functionality.
 
-- /ETA: Early-October/
+- /ETA: Early-December/
 - Assignee: *Dowland Aiello*, *Lawrence Qupty*
   
-** TODO Main Event Loop / Scheduler
+** DONE Main Event Loop / Scheduler
+CLOSED: [2022-12-07 Wed 16:51]
 
 A process scheduler that uses an event loop to facilitate system calls, and communication between processes. Identifies processes on a per-DAO basis, where each instance of the process is unique, and identified by a hexadecimal address. Rapidly toggles between processes to emulate time-sharing.
 
@@ -24,6 +25,7 @@ An import-based system that signals capabilities of a loaded module, and which e
 
 A base module included with the Beacon DAO that queues modules for instantiation by the VVM.
 
-** TODO Granular Consent Model
+** DONE Granular Consent Model
+CLOSED: [2022-12-07 Wed 16:51]
 
 A kernel module that implements a system for acquiring user consent, based on the messages that an application can emit, which represent the API's that it has access to (e.g., /"x application is requesting access to your wallet"/).

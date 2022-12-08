@@ -8,7 +8,7 @@
 
 Vision's test-net release will be gradually rolled out in two phases: a private test-net release, and a public test-net release. The former will be largely closed-source, operate in a sandboxed environment, and be accessible to only trusted partners.
 
-- /ETA: Dec 2022/
+- /ETA: Jan 2023/
 ** TODO Enterprise infrastructure
 - Develop sandboxed deployment environments that shield as much of the Vision codebase as possible from clients, while exposing features that require testing
 ** TODO Field Testing

@@ -6,7 +6,7 @@
 
 * TODO Public Test Net [0/3]
 
-- /ETA: Q1 2023/
+- /ETA: Q2 2023/
 
 ** TODO Cash Bug Bounties
 Use dework, and alternative platforms, like gitcoin, to set bounties for known, and unknown bugs. Estimated budget up to $5,000.
