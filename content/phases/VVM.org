@@ -4,7 +4,7 @@
 #+AUTHOR: Dowland Aiello
 #+DATE: 06/22/2022
 
-* TODO Vision Virtual Machine [2/4]
+* TODO Vision Virtual Machine [4/4]
 DEADLINE: <2022-12-09 Fri>
 
 The Vision Virtual Machine is a module for the *Beacon DAO* that allows for general computation, and execution of arbitrary code with access to a limited, event-driven API for system-call-like functionality.
@@ -17,11 +17,13 @@ CLOSED: [2022-12-07 Wed 16:51]
 
 A process scheduler that uses an event loop to facilitate system calls, and communication between processes. Identifies processes on a per-DAO basis, where each instance of the process is unique, and identified by a hexadecimal address. Rapidly toggles between processes to emulate time-sharing.
 
-** TODO ABI Capabilities System
+** DONE ABI Capabilities System
+CLOSED: [2022-12-13 Tue 16:45]
 
 An import-based system that signals capabilities of a loaded module, and which events it is capable of emitting. Will be implemented via WASM module imports, likely. Bindings for languages required.
 
-** TODO Root Discovery Module
+** DONE Root Discovery Module
+CLOSED: [2022-12-13 Tue 16:45]
 
 A base module included with the Beacon DAO that queues modules for instantiation by the VVM.
 

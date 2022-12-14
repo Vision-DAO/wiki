@@ -3,7 +3,7 @@
 #+TITLE: Vision Technical Roadmap
 #+DATE: 06/19/2022
 
-* Roadmap [1/8]
+* Roadmap [2/8]
 
 ** DONE Beacon DAO [2/2]
 The *Beacon DAO* is a decentralized autonomous organization implementing the Vision DAO, and a basic system for "bootstrapping" user applications from a minimal starting point. This means that a bare, basic implementation of the *Beacon DAO* can be released to the public, and be upgraded without any intervention, over time.
@@ -12,8 +12,8 @@ The *Beacon DAO* is a decentralized autonomous organization implementing the Vis
 - Assignee: *Dowland Aiello*
 - See the [[file:phases/BeaconDAO.org::*Beacon DAO][roadmap]].
 
-** TODO Vision Virtual Machine (~VVM~) [2/4]
-DEADLINE: <2022-12-09 Fri>
+** DONE Vision Virtual Machine (~VVM~) [4/4]
+CLOSED: [2022-12-13 Tue 16:46] DEADLINE: <2022-12-09 Fri>
 
 The Vision Virtual Machine is a module for the *Beacon DAO* that allows for general computation, and execution of arbitrary code with access to a limited, event-driven API for system-call-like functionality.
 
