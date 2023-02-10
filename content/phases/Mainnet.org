@@ -6,7 +6,7 @@
 
 * TODO Public Main Net [0/3]
 
-- /ETA: Q3 2023/
+- /ETA: Q1 2024/
 ** TODO Code Reviews, Auditing
 Perform internal, and external audits of core Vision components, including all modules developed in-house. Resolve any security concerns prior to release of the public test net, including ones that were uncovered in the prior private testnet. Aim for public transparency with audit results prior to public testnet release.
 ** TODO Open-Source Codebase

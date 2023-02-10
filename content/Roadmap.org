@@ -8,7 +8,7 @@
 ** DONE Beacon DAO [2/2]
 The *Beacon DAO* is a decentralized autonomous organization implementing the Vision DAO, and a basic system for "bootstrapping" user applications from a minimal starting point. This means that a bare, basic implementation of the *Beacon DAO* can be released to the public, and be upgraded without any intervention, over time.
 
-- /ETA: Mid-July/
+- /ETA: Mid-July 2022/
 - Assignee: *Dowland Aiello*
 - See the [[file:phases/BeaconDAO.org::*Beacon DAO][roadmap]].
 
@@ -17,43 +17,43 @@ CLOSED: [2022-12-13 Tue 16:46] DEADLINE: <2022-12-09 Fri>
 
 The Vision Virtual Machine is a module for the *Beacon DAO* that allows for general computation, and execution of arbitrary code with access to a limited, event-driven API for system-call-like functionality.
 
-- /ETA: Early-December/
+- /ETA: Early-December 2022/
 - Assignee: *Dowland Aiello*, *Lawrence Qupty*
 - See the [[file:phases/VVM.org::*Vision Virtual Machine][roadmap]].
   
 ** TODO Vision Operating System [0/10]
-DEADLINE: <2022-12-30 Fri>
+DEADLINE: <2023-06-30 Fri>
 
 The Vision Operating System constitutes all of the major baseline features that are necessary for Vision end-users to begin operating DAO's and developing Vision applications on the platform.
 
-- /ETA: Late-December/
+- /ETA: Late-June 2023/
 - Assignee: *Dowland Aiello*, *Lawrence Qutpy*
 - See the [[file:phases/VisionOS.org::*Vision Operating System][roadmap]].
   
 ** TODO Ecosystem Features [0/4]
-DEADLINE: <2022-10-31 Mon>
+DEADLINE: <2023-12-31 Sun>
 
 Modules that implement important qualify-of-life features, and features that will greatly increase the growth rate of the Vision ecosystem by lowering barriers to entry, and enhancing the Vision experience overall.
 
-- /ETA: January/
+- /ETA: Dec 2023/
 - See the [[file:phases/Ecosystem.org::*Ecosystem Features][roadmap]].
 
 ** TODO Private Test Net [0/2]
 Vision's test-net release will be gradually rolled out in two phases: a private test-net release, and a public test-net release. The former will be largely closed-source, operate in a sandboxed environment, and be accessible to only trusted partners.
 
-- /ETA: January/
+- /ETA: Dec 2023/
 - See the [[file:phases/PrivateTestnet.org::*Private Test Net][roadmap]].
 
 ** TODO Public Test Net [0/4]
-- /ETA: Q2 2023/
+- /ETA: Dec 2023/
 - See the [[file:phases/PublicTestnet.org::*Public Test Net][roadmap]].
 
 ** TODO Public Main Net [0/3]
-- /ETA: Q3 2023/
+- /ETA: Q1 2024/
 - See the [[file:phases/Mainnet.org::*Public Main Net][roadmap]].
   
 ** TODO Post-Release [0/5]
 General goals for Vision DAO after its mainnet release, including strategies for decentralizing, and desired partnerships.
 
-- /ETA: Q4 2023/
+- /ETA: Q1 2024/
 - See the [[file:phases/PostRelease.org::*Post-Release][roadmap]].

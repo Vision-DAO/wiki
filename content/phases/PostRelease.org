@@ -8,7 +8,7 @@
 
 General goals for Vision DAO after its mainnet release, including strategies for decentralizing, and desired partnerships.
 
-- /ETA: Q4 2023/
+- /ETA: Q1 2024/
 
 ** TODO Vision OS Long-Term Support [0/2]
 Post-release, the Vision DAO will be solely responsible for ensuring the security of, and maintaining the Vision Operating System, by patching bugs, and implementing needed features as they arise.

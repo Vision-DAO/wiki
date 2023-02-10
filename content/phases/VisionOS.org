@@ -6,7 +6,7 @@
 
 * TODO Vision Operating System [0/10]
 
-DEADLINE: <2022-12-30 Fri>
+DEADLINE: <2023-06-30 Fri>
 ** TODO Dependency-Based Discovery
 
 A module that provides a basic mechanism for discovering modules, based on detecting dependencies between applications and DAO's. Essentially a symbol table for applications written on Vision that DAO applications must import to be able to interface with them. Can be used to traverse the network and find new modules.
